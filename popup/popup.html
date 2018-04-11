@@ -1,0 +1,23 @@
+<html>
+<head>
+  <script type='text/javascript' src='popup.js'></script>
+</head>
+<body>
+  <button id="start">Start</button>
+  <button id="end">Stop</button>
+  <button id="minus">-</button>
+  <button id="plus">+</button>
+
+  <form name="runType">
+    <input type="radio" name="severity" value="dry" checked>
+    Dry run, don't delete anything, but go through all your activity.
+
+    <input type="radio" name="severity" value="weak">
+    Delete all of your comments, your likes, your pokes etc. Also hide everything from your timeline.
+
+    <input type="radio" name="severity" value="all">
+    Remove everything except for photos, including unfriending all of your friends.
+  </form>
+
+</body>
+</html>

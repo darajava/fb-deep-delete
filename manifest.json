@@ -1,0 +1,36 @@
+{
+  "manifest_version": 2,
+
+  "name": "Facebook deep delete", 
+  "short_name": "fb deep delete", 
+  "description": "Removes all your likes, comments, friends, and pokes. And hides everything else.",
+  "version": "0.5",
+  "author": "Dara Javaherian",
+    
+  "permissions": ["tabs", "*://m.facebook.com/*"],
+  
+  "background": {
+    "persistent":true,
+    "scripts": [
+      "bg/background.js"
+    ]
+  },
+  "icons": {
+    "128": "icons/youtube-128.png"
+  },
+  "browser_action": {
+    "default_icon": "icons/icon.png",
+    "default_popup": "popup/popup.html"
+  },
+  "web_accessible_resources": [
+    "click.wav"
+  ],
+  "content_scripts" : [{
+    "matches" : 
+      ["https://m.facebook.com/*",
+      "http://m.facebook.com/*"],
+    "js" : [
+      "js/inject.js"],
+    "css" : ["styles/styles.css"]
+  }]
+}
